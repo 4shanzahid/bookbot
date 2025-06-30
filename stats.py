@@ -9,6 +9,8 @@ def count_words(file_contents):
 def count_characters(text):
     counts = {}
     for char in text.lower():
+        if char == " ":
+            continue
         if char in counts:
             counts[char] += 1
         else:
